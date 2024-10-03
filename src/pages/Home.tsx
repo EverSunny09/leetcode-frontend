@@ -5,19 +5,15 @@ import { useNavigate } from 'react-router-dom';
 const Home: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    navigate('/login'); // Redirects to the Login page
-  };
-
-  const handleSignUp = () => {
-    navigate('/signup'); // Redirects to the Sign Up page
+  const handleLoginSignUp = (action:string) => {
+    navigate(action);
   };
 
   return (
     <div>
       <h1>Welcome to the App</h1>
-      <button onClick={handleLogin}>Login</button>
-      <button onClick={handleSignUp}>Sign Up</button>
+      <button onClick={()=> handleLoginSignUp('/login')}>Login</button>
+      <button onClick={()=> handleLoginSignUp('/signup')}>Sign Up</button>
     </div>
   );
 };

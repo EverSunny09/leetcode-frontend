@@ -1,4 +1,3 @@
-// src/components/AuthForm.tsx
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginRequest, signupRequest } from '../store/actions/authActions';

@@ -1,10 +1,7 @@
-// src/redux/auth/authSagas.ts
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { LOGIN_REQUEST, SIGNUP_REQUEST } from '../actions/actionTypes';
 import { loginSuccess, loginFailure, signupSuccess, signupFailure } from '../actions/authActions';
 
-
-// Mock API call for login
 const loginApi = async (email: string, password: string) => {
   const response = await fetch('http://localhost:3000/login', {
     method: 'POST',
@@ -24,7 +21,6 @@ const loginApi = async (email: string, password: string) => {
   return await response.json();
 };
 
-// Updated signup API call to call localhost:3000
 const signupApi = async (email: string, password: string, isActive: boolean) => {
   const response = await fetch('http://localhost:3000/signup', {
     method: 'POST',
